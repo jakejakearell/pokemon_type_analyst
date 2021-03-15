@@ -21,6 +21,13 @@ RSpec.describe "team index page", type: :feature do
   end
   it "I can see all the pokemon on my current team" do
 
-    # expect(page).to have_content("Play Count: #{song_2.play_count}")
+    visit pokemon_team_dashboard_index_path(@my_team)
+
+    expect(page).to have_content(@grookey.name)
+    expect(page).to have_content(@sobble.name)
+    expect(page).to have_content(@orbeetle.name)
+    expect(page).to have_content(@butterfree.name)
+    expect(page).to have_content(@onix.name)
+    expect(page).to have_content(@alcremie.name)
   end
 end
