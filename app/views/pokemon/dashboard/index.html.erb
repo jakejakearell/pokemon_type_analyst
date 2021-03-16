@@ -1,3 +1,10 @@
-<% @team.pokemon.each do |pokemon| %>
-  <%= pokemon.name %>
-<% end %>
+<div class="container-fluid">
+  <div class="row">
+    <% @team.pokemon.each do |pokemon| %>
+      <div class="col">
+      <img class="align-self-center" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png" alt="edit" />
+      <p class="mb-0"><%= pokemon.name %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
